@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+body p {
+    font-size: 18px;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #B5D8BF;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: block;
+    color: rgb(60, 60, 60);
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.heading {
+    margin: 75px auto;
+    width: 50%;
+}
+
+.heading h1 {
+    color: #212121;
+}
+
+.document {
+    margin: auto;
+    width: 50%;
+    padding: 0px;
+    margin-top: -80px;
+}
+.document a{
+    text-decoration: none;
+}
+
+.grid {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+}
+.content {
+    margin: auto;
+    padding: 3px;
+
+}
+.grid  a{
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.content img {
+    display: block;
+    margin: auto auto;
+    width: 85%;
+    border-radius: 22px;
+}
+
+footer {
+    padding: auto;
+    background-color: #B5D8BF;
+    color: white;
+}
+
+footer p {
+    text-align: center;
+    color: rgb(60, 60, 60);
+    font-size: 22px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
