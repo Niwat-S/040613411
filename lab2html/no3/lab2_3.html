@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Exercise</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pang" style="margin: 10px 10px;">
+        <h1>เข้าสู่ระบบ</h1>
+        <form action="succeed.html">
+            <table style="width: auto;">
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="Username" pattern="\S+" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="Password" pattern="[a-zA-Z0-9\S+]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ: <br>
+                        1559 <br>
+                        <input type="password" pattern="1559" required>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </table><br>
+            <input type="image"src="https://cdn-icons-png.flaticon.com/128/4034/4034219.png" style="width: 5%;">
+        </form>
+    </div>
+</body>
+
+</html>

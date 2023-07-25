@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="form.php" method="get">
+        USERNAME :
+        <input type="text" name="username" placeholder="Username" pattern="[A-Z]+">
+        <p>
+        <label>สาขาวิชา:</label>
+            <select name="dept">
+                <option value="">--Please choose an option--</option>
+                <option value="CS">CS</option>
+                <option value="IC">IC</option>
+                <option value="MA">MA</option>
+                <option value="IMI">IMI</option>
+                <option value="AS">AS</option>
+                <option value="AFET">AFET</option>
+            </select><p>
+        <label>STUDENT ID:</label>
+        <input type="text" name="ID" placeholder="Student ID" pattern="\d{2}-\d{6}-\d{4}-\d{1}">
+        <p> 
+        <label>ADDRESS:</label>
+        <input type="text" name="address" placeholder="Address" pattern="[\d\/]*">
+        <p>
+        <label>รหัสสินค้า:</label>
+        <input type="text" name="address" placeholder="product code" pattern="[A_Z]{3}\d{2}">
+        <p>
+        <label>ชื่อ:</label>
+        <input type="text" name="namethai" placeholder="กรอกชื่อภาษาไทยเท่านั้น" pattern="[ก-๙\s]+">
+         
+        <p><input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW2</title>
+  <style>
+    .contenner {
+      width: 40%;
+      height: auto;
+      border: 2px solid black;
+    }
+    .rectangle-box {
+      margin: 10px 10px;
+      position: relative;
+      width: 60%;
+      height: auto;
+      border: 2px solid black;
+      padding: 10px 5px;
+    }
+    .text-on-box {
+      position: absolute;
+      top: -10px;
+      left: 15%;
+      width: auto;
+      transform: translateX(-50%);
+      background-color: rgb(255, 255, 255);
+      padding: 0.3px 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <h3>แบบฟอร์มจองทัวร์</h3>
+  <div class="contenner">
+    <div class="rectangle-box">
+      <span class="text-on-box">ข้อมูลทั่วไป</span>
+      <form action="form.php">
+        <!-- div1 ชื่อ-สกุล-->
+        <label for="Name">ชื่อ-สกุล:</label>
+        <br>
+        <input type="text" name="Name" placeholder="กรอกชื่อ-สกุล" pattern="^[a-zA-Zก-๙]+ [a-zA-Zก-๙]+" required>
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="text" name="Email" placeholder="Email" pattern=".*@.*" required>
+        <br>
+        <label for="phone">เลขโทรศัพท์:</label>
+        <br>
+        <input type="tel" name="Phone" pattern="[+]?66[0-9]{9}" required value="+66">
+        <br>
+        <label for="Address">ที่อยู่</label>
+        <br>
+        <textarea name="Address" rows="3" cols="30">
+        </textarea>
+        <br>
+        <label for="postoffice">รหัสไปรษณีย์ :</label>
+        <input type="text" name="postoffice" style="width: 20%;" pattern="[0-9]{5}">
+        <br>
+        <label for="image">รูปผู้จอง</label>
+        <input type="file" name="image">
+    </div>
+    <!-- div2 ข้อมูลเข้าสู่ระบบ-->
+    <div class="rectangle-box">
+      <span class="text-on-box " style="left: 20%;">ข้อมูลเข้าสู่ระบบ</span>
+      <label for="Username">Username:</label><br>
+      <input type="text" name="Username" pattern="[a-zA-Z0-9_]{8,}" required><br>
+      <i>ประกอบด้วยตัวเลข ตัวอักษรหรือ_ตั้งแต่ 8 ตั้วขึ้นไป</i>
+      <br><br>
+      <label for="Password">Password:</label><br>
+      <input type="password" name="Password" pattern=".{8,}" required><br>
+      <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+    </div>
+    <!-- div3 ทัวร์ที่ต้องการ-->
+    <div class="rectangle-box">
+      <span class="text-on-box" style="left: 30%;">ข้อมูลทัวร์ที่ต้องการ</span>
+        <label for="">แพคเก็จทัวร์:</label>
+        <select name="tour package" >
+        <option selected="selected">--select--</option>
+        <option value="England" >อังกฤษ</option>
+        <option value="Spain" >สเปน</option>
+        <option value="Italy" >อินตาลี</option>
+        <option value="Brazil" >บราซิล</option>
+        <option value="Japan" >ญี่ปุ่น</option>
+        </select>
+        <br>
+        <label for="day">วันที่เดินทาง:</label>
+        <input type="date" name="day" required><br>
+        <label>จำนวนผู้โดยสาร</label>
+        <input type="text" name="date" pattern="[1-9]|10" style="width: 15%;" required><br>
+        <label>เน้นการท่องเที่ยวแบบใด?</label><br>
+        <input type="checkbox" id="shopping" name="shopping">
+        <label for="">ชอปปิ้ง</label><br>
+        <input type="checkbox" id="nature" name="nature">
+        <label for="">ธรรมชาติ</label><br>
+        <input type="checkbox" id="sea" name="sea">
+        <label for="">ทะเล</label><br>
+      </div>
+      <label style="margin-left: 10px;">ยอมรับเงื่อนไปและข้อตกลง</label>
+      <input type="radio" id="html" name="Accept terms and conditions" value="I agree" required>
+      <label for="html">I agree</label>
+      <input type="radio" id="html" name="Accept terms and conditions" value="I disagree" required>
+      <label for="html">I disagree</label>
+      <input type="submit" style="margin : 10px 10px;" value="จอง">
+    </form>
+  </div>
+</body>
+</html>
