@@ -1,0 +1,15 @@
+body>header>h1{
+    color: red;
+}
+.country{
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+section :nth-child(2)::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+}
+section{
+    border-bottom: 1px solid #000000;
+}
