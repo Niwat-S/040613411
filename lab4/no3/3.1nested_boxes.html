@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nested Boxes</title>
+    <style>
+      div#box1{
+        margin: 40px;
+        padding: 40px;
+        border: 10px solid #000;
+        background-color: #F0D;
+      }
+      div#box2{
+        margin: 40px;
+        padding: 40px;
+        border: 10px dotted #000;
+        background-color: #FF0;
+        
+        
+      }
+      div#box3{
+        margin: 40px;
+        padding: 40px;
+        border: 10px dashed #000;
+        background-color: rgb(0, 225, 255);
+        
+      }
+      h1 {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 0.9em;
+      }
+      footer a {
+        border: 1px solid #777;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 2px;
+        margin-right: 10px;
+        background-color: #fff;
+      }
+      footer a,
+      footer a:visited {
+        text-decoration: none;
+        color: #00a;
+      }
+      footer a > strong {
+        background-color: #55c;
+        color: #fff;
+        padding: 2px;
+        padding-left: 4px;
+        margin-right: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nested Boxes</h1>
+
+    <div id="box1">
+      Box 1
+      <div id="box2">
+        Box 2
+        <div id="box3">Box 3</div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="http://validator.w3.org/check/referer">
+        <strong> HTML </strong> Valid!
+      </a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+        <strong> CSS </strong> Valid!
+      </a>
+    </footer>
+  </body>
+</html>
