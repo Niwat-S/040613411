@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab no5</title>
+    <script>
+      function add() {
+        let na = document.getElementById("name").value;
+        console.log(na)
+        let ad = document.getElementById("address").value;
+        let nu = document.getElementById("num").value;
+        let Tbody = document.getElementById("Tbody");
+
+        let tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.innerHTML = na;
+        tr.appendChild(td);
+        var td = document.createElement("td");
+        td.innerHTML = ad;
+        tr.appendChild(td);
+        var td = document.createElement("td");
+        td.innerHTML = nu;
+        tr.appendChild(td);
+        Tbody.appendChild(tr);
+      }
+    </script>
+  </head>
+  <body>
+    ชื่อลูกค้า<input id="name"><br/>
+    ที่อยู่ <input id="address"><br/>
+    เบอร์โทรศัพท์<input id="num"><br/>
+    <button onclick="add()">เพิ่ม</button>
+    <br />
+    <br />
+    <table border="1" bordercolor="#000">
+      <thead>
+        <td>ชื่อลูกค้า</td>
+        <td>ที่อยู่</td>
+        <td>โทรศัพท์</td>
+        <tbody id="Tbody">
+
+        </tbody>
+      </thead>
+
+    </table>
+  </body>
+</html>

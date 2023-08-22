@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changeTextColor(inputId) {
+  var inputElement = document.getElementById(inputId);
+  inputElement.style.color = "green";
+}
+
+function checkChange(inputId) {
+  var inputElement = document.getElementById(inputId);
+  inputElement.addEventListener("input", function() {
+    changeTextColor(inputId);
+  });
+}
+</script>
+</head>
+<body>
+Name <input type="text" id="name">
+<br>
+Age <input type="text" id="age">
+<br>
+birthdate <input type="birthdate" id="birthdate">
+
+<script>
+  checkChange("name");
+  checkChange("age");
+  checkChange("birthdate");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab5no1</title>
+    <script>
+      let student = [
+        {
+          fullname: "นายตั้งใจ เรียนมาก",
+          age: 18,
+          year: 1,
+          gpa: 3.4,
+          help: true,
+        },
+        {
+          fullname: "หนึ่ง สอง",
+          age: 18,
+          year: 1,
+          gpa: 3.0,
+          help: true,
+        },
+        {
+          fullname: "นายส่งงาน ตลอดมา",
+          age: 19,
+          year: 2,
+          gpa: 3.0,
+          help: false,
+        },
+        {
+          fullname: "นางสาวใส่ใจ ดีงาม",
+          age: 20,
+          year: 3,
+          gpa: 2.9,
+          help: true,
+        },
+      ];
+      let arr = [[], [], [], []];
+      window.onload = function () {
+        for (i in student) {
+          let data = "";
+          if (student[i].gpa >= 3.2) {
+            data +=
+              student[i].fullname +
+              " เกิดเมื่อปี " +
+              (new Date().getFullYear() - student[i].age + 543) +
+              " ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์";
+            if (student[i].help) {
+              data += "และยังช่วยงานภาควิชาด้วย\n";
+            }
+            arr[student[i].year - 1].push(data);
+          } else if (
+            student[i].help &&
+            student[i].gpa >= 2.75 &&
+            student[i].year >= 2
+          ) {
+            data +=
+              student[i].fullname +
+              " เกิดเมื่อปี " +
+              (new Date().getFullYear() - student[i].age + 543) +
+              " ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ และยังช่วยงานภาควิชาด้วย\n";
+              arr[student[i].year - 1].push(data);
+          } else {
+            data +=
+              student[i].fullname +
+              " เกิดเมื่อปี " +
+              (new Date().getFullYear() - student[i].age + 543) +
+              " ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ และยังไม่ช่วยงานภาควิชาด้วย";
+          }
+          document.getElementById("container").innerHTML +=
+            "<div>" + data + "</div>";
+        }
+
+        let data = "";
+
+        for (let i = 0; i < 3; i++) {
+          data += "\nชั้นปีที่ " + (i + 1);
+          if (arr[i].length === 0) {
+            data += "\nไม่มี\n";
+          } else {
+            for (let j = 0; j < arr[i].length; j++) {
+              data += "\n" + arr[i][j];
+            }
+          }
+        }
+        console.log(data);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
