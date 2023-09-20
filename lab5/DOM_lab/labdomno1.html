@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-  <input type="number" id="input1">
-  <span> + </span>
-  <input type="number" id="input2">
-  <span> = </span>
-  <input type="text" id="result" readonly>
-  <button onclick="calculate()">Go Go</button>
+  <head> </head>
+  <body>
+    <input type="number" id="input1" />
+    <span> + </span>
+    <input type="number" id="input2" />
+    <span> = </span>
+    <input type="text" id="result" readonly />
+    
+    <button onclick="calculate()">Go Go</button>
 
-  <script>
-    function calculate() {
-      var input1 = document.getElementById('input1');
-      var input2 = document.getElementById('input2');
-      var resultField = document.getElementById('result');
+    <script>
+      function calculate() {
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var resultField = document.getElementById("result");
 
-      var value1 = parseFloat(input1.value);
-      var value2 = parseFloat(input2.value);
+        var value1 = parseFloat(input1.value);
+        var value2 = parseFloat(input2.value);
 
-      if (!isNaN(value1) && !isNaN(value2)) {
         var sum = value1 + value2;
         resultField.value = sum;
-      } else {
-        resultField.value = "Invalid input";
+        
       }
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
