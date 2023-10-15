@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xmlHttp;
+
+        function send() {
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = showResult;
+
+            var username = document.getElementById("username").value;
+
+            var url = "checkno2.php?username=" + username;
+
+            xmlHttp.open("GET", url);
+            xmlHttp.send();
+        }
+        
+        function showResult() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("result").innerHTML = xmlHttp.responseText;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>ค้นหาข้อมูลสมาชิกจากตาราง member</h1><br>
+    <br>
+    <input type="text" id="username" onkeyup="send()"><br><br>
+    <div id="result"></div>
+</body>
+</html>

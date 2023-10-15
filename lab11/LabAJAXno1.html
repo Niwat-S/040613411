@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>บันทึกการขาย</h1><br>
+    <br>
+    มะม่วง กก.ละ 30 บาทขายได้ <input type="number" id="mango" oninput="calculateTotal()"> กก. <br>
+    ส้ม กก.ละ 70 บาทขายได้ <input type="number" id="orange" oninput="calculateTotal()"> กก. <br>
+    กล้วย หวีละ 30 บาท ขายได้ <input type="number" id="banana" oninput="calculateTotal()"> หวี <br>
+
+    <p>ยอดขายรวม: <span id="total_sales">0</span> บาท</p>
+
+    <script>
+        function calculateTotal() {
+            var mangoPrice = 30;
+            var orangePrice = 70;
+            var bananaPrice = 30;
+
+            var mango = parseInt(document.getElementById("mango").value) || 0;
+            var orange = parseInt(document.getElementById("orange").value) || 0;
+            var banana = parseInt(document.getElementById("banana").value) || 0;
+
+            var total_sales = (mango * mangoPrice) + (orange * orangePrice) + (banana * bananaPrice);
+
+            document.getElementById("total_sales").textContent = total_sales;
+        }
+    </script>
+</body>
+</html>
